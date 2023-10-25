@@ -1,37 +1,23 @@
-.blok {
+.blok, .blok2 {
     width: 200px; /* Breedte van het blok */
     height: 200px; /* Hoogte van het blok */
     background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166654677232922674/nig.png?ex=654b46d6&is=6538d1d6&hm=8a643a635d8de862077841dc418d56b869104fb31b76d5f20fa3e7ab1110eaab&'); /* Achtergrondafbeelding voor het blok */
     background-size: cover; /* De afbeelding aanpassen aan de grootte van het blok */
     text-align: center; /* Tekst uitlijnen in het midden van het blok */
     padding: 20px; /* Binnenafstand van het blok */
-    margin: 20px; /* Buitenafstand van het blok */
+    margin: 10px; /* Minder buitenafstand van het blok */
 }
 
-.blok a {
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blok a, .blok2 a {
     text-decoration: none; /* Verwijder onderstreping van de link */
     color: #fff; /* Tekstkleur van de link */
 }
 
-.blok a:hover {
-    color: #ff5733; /* Tekstkleur van de link bij hover (muis erboven) */
-}
-
-.blok2 {
-    width: 200px; /* Breedte van het blok */
-    height: 200px; /* Hoogte van het blok */
-    background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166654677232922674/nig.png?ex=654b46d6&is=6538d1d6&hm=8a643a635d8de862077841dc418d56b869104fb31b76d5f20fa3e7ab1110eaab&'); /* Achtergrondafbeelding voor het blok */
-    background-size: cover; /* De afbeelding aanpassen aan de grootte van het blok */
-    text-align: center; /* Tekst uitlijnen in het midden van het blok */
-    padding: 20px; /* Binnenafstand van het blok */
-    margin: 20px; /* Buitenafstand van het blok */
-}
-
-.blok2 a {
-    text-decoration: none; /* Verwijder onderstreping van de link */
-    color: #fff; /* Tekstkleur van de link */
-}
-
-.blok2 a:hover {
+.blok a:hover, .blok2 a:hover {
     color: #ff5733; /* Tekstkleur van de link bij hover (muis erboven) */
 }
