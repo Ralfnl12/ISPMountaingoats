@@ -43,14 +43,41 @@ li.account a:hover {
 }
 
 
-.blok, .blok2 {
+.blok {
     width: 200px; /* Breedte van het blok */
     height: 200px; /* Hoogte van het blok */
     background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166666361276211281/image.png?ex=654b51b8&is=6538dcb8&hm=32c4e6e8515f2cb6bbbc65ccab27b8953c9ec8da21adc666608becf22579d9b9&'); /* Achtergrondafbeelding voor het blok */
     background-size: cover; /* De afbeelding aanpassen aan de grootte van het blok */
     text-align: center; /* Tekst uitlijnen in het midden van het blok */
     padding: 20px; /* Binnenafstand van het blok */
-    margin: 10px; /* Minder buitenafstand van het blok */
+    margin: 3px; /* Minder buitenafstand van het blok */
+}
+.blok2 {
+    width: 200px; /* Breedte van het blok */
+    height: 200px; /* Hoogte van het blok */
+    background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166665495118876692/IMG_0082.JPEG?ex=654b50e9&is=6538dbe9&hm=abba82f9589ea801e667851defdd4f4293afce5c6c26fc7f681a122be6504483&'); /* Achtergrondafbeelding voor het blok */
+    background-size: cover; /* De afbeelding aanpassen aan de grootte van het blok */
+    text-align: center; /* Tekst uitlijnen in het midden van het blok */
+    padding: 20px; /* Binnenafstand van het blok */
+    margin: 3px; /* Minder buitenafstand van het blok */
+}
+.blok3 {
+    width: 200px; /* Breedte van het blok */
+    height: 200px; /* Hoogte van het blok */
+    background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166663260108509215/nig.png?ex=654b4ed4&is=6538d9d4&hm=7e4a6bbc763bcc4b3f1b1c0d629641632e3b17a069c5832be9ba0c40b93b095a&'); /* Achtergrondafbeelding voor het blok */
+    background-size: cover; /* De afbeelding aanpassen aan de grootte van het blok */
+    text-align: center; /* Tekst uitlijnen in het midden van het blok */
+    padding: 20px; /* Binnenafstand van het blok */
+    margin: 3px; /* Minder buitenafstand van het blok */
+}
+.blok4 {
+    width: 200px; /* Breedte van het blok */
+    height: 200px; /* Hoogte van het blok */
+    background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166664976895840278/IMG_0162.JPG?ex=654b506e&is=6538db6e&hm=b2460f202e077f12a7e5bd5e25fe9002976141f93b3db98d9e3bd1cd25bbf4fe&'); /* Achtergrondafbeelding voor het blok */
+    background-size: cover; /* De afbeelding aanpassen aan de grootte van het blok */
+    text-align: center; /* Tekst uitlijnen in het midden van het blok */
+    padding: 20px; /* Binnenafstand van het blok */
+    margin: 3px; /* Minder buitenafstand van het blok */
 }
 
 .container {
@@ -58,7 +85,7 @@ li.account a:hover {
     justify-content: space-between;
 }
 
-.blok a, .blok2 a {
+.blok a, .blok2 a, .blok3 a, .blok4 a {
     text-decoration: none; /* Verwijder onderstreping van de link */
     color: #fff; /* Tekstkleur van de link */
 }
