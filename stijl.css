@@ -1,3 +1,48 @@
+/* Basisstijlen voor de navigatiebalk */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+li.navitem {
+    float: left;
+}
+
+li.navitem a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Stijlen voor de link in de navigatiebalk wanneer de muis erover beweegt */
+li.navitem a:hover {
+    background-color: #dddddd86;
+    color: black;
+}
+
+/* Stijlen voor de "Account" knop */
+li.account {
+    float: right; /* Plaats rechts in de balk */
+}
+
+li.account a {
+    color: white; /* Dezelfde stijl als andere knoppen */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.account a:hover {
+    background-color: #dddddd86;
+    color: black;
+}
+
+
 .blok, .blok2 {
     width: 200px; /* Breedte van het blok */
     height: 200px; /* Hoogte van het blok */
