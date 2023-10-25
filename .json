@@ -1,0 +1,18 @@
+{
+ "app_config": {
+    "multi_user": {
+      "users": [
+        {
+          "name": "User 1",
+          "password": "password1",
+          "admin": true
+        },
+        {
+          "name": "User 2",
+          "password": "password2",
+          "admin": false
+        }
+      ]
+    }
+ }
+}
