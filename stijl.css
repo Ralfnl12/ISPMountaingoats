@@ -1,0 +1,17 @@
+.blok {
+    width: 200px; /* Breedte van het blok */
+    height: 100px; /* Hoogte van het blok */
+    background-color: #3498db; /* Achtergrondkleur van het blok */
+    text-align: center; /* Tekst uitlijnen in het midden van het blok */
+    padding: 20px; /* Binnenafstand van het blok */
+    margin: 20px; /* Buitenafstand van het blok */
+}
+
+.blok a {
+    text-decoration: none; /* Verwijder onderstreping van de link */
+    color: #fff; /* Tekstkleur van de link */
+}
+
+.blok a:hover {
+    color: #ff5733; /* Tekstkleur van de link bij hover (muis erboven) */
+}
