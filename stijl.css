@@ -90,7 +90,7 @@ li.account a:hover {
     color: #fff; /* Tekstkleur van de link */
 }
 
-.blok a:hover, .blok2 a:hover {
+.blok a:hover, .blok2 a:hover, .blok3 a:hover, .blok4 a:hover {
     color: #ff5733; /* Tekstkleur van de link bij hover (muis erboven) */
 }
 
