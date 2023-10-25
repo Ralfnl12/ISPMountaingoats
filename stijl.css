@@ -1,7 +1,7 @@
 .blok, .blok2 {
     width: 200px; /* Breedte van het blok */
     height: 200px; /* Hoogte van het blok */
-    background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166654677232922674/nig.png?ex=654b46d6&is=6538d1d6&hm=8a643a635d8de862077841dc418d56b869104fb31b76d5f20fa3e7ab1110eaab&'); /* Achtergrondafbeelding voor het blok */
+    background-image: url('https://cdn.discordapp.com/attachments/1166653275681083452/1166666361276211281/image.png?ex=654b51b8&is=6538dcb8&hm=32c4e6e8515f2cb6bbbc65ccab27b8953c9ec8da21adc666608becf22579d9b9&'); /* Achtergrondafbeelding voor het blok */
     background-size: cover; /* De afbeelding aanpassen aan de grootte van het blok */
     text-align: center; /* Tekst uitlijnen in het midden van het blok */
     padding: 20px; /* Binnenafstand van het blok */
