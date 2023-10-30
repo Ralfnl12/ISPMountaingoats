@@ -6,8 +6,8 @@ document.getElementById("login-form").addEventListener("submit", function (event
 
     // Define your user-password pairs and their associated redirect URLs
     const users = {
-        "user1": { password: "password1", redirectUrl: "https://bit.ly/473dn8x" },
-        "user2": { password: "password2", redirectUrl: "https://example.com/user2" },
+        "puppy": { password: "Cute", redirectUrl: "https://bit.ly/473dn8x" },
+        "illegal": { password: "Yard", redirectUrl: "https://www.youtube.com/watch?v=h0SNAsocIx8&pp=ygUXaWxsZWdhbCBpbiBteSB5YXJkIHNvbmc%3D" },
         "thegoat": { password: "mountain", redirectUrl: "https://www.youtube.com/watch?v=YjyUIwKPAxA" },
     };
 
