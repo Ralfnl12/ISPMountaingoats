@@ -7,6 +7,14 @@ body {
     background-color: #435165;
     margin: 0;
     padding: 0;
+    user-select: none;
+    overflow: hidden; /* Hide scrollbars */
+}
+body {
+    user-select: none;
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+    padding: 0;
 }
 .login {
     width: 400px;
@@ -27,6 +35,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 20px;
+
 }
 .login form label {
     display: flex;
@@ -36,6 +45,7 @@ body {
     height: 50px;
     background-color: #3274d6;
     color: #ffffff;
+
 }
 .login form input[type="password"], .login form input[type="text"] {
     width: 310px;
@@ -54,11 +64,116 @@ body {
     font-weight: bold;
     color: #ffffff;
     transition: background-color 0.2s;
+    border-radius: 20px;
 }
 .login form input[type="submit"]:hover {
   background-color: #2868c7;
     transition: background-color 0.2s;
+    border-radius: 20px;
 }
 body.loggedin {
 	background-color: #f3f4f7;
+}
+/* vanaf hier is ISP */
+.input {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 0px;
+    border-radius: 0px;
+}
+.search-container {
+    width: 40%; /* Breedte van het iframe-venster (70% van de breedte van de container) */
+    height: 600px; /* Hoogte van het iframe-venster */
+    position: absolute;
+    left: 58%;
+    box-shadow: 0 0 1px 5px rgba(255, 255, 255, 0.1);
+    border-radius: 25px; 
+    margin-top: 20px;
+}
+.topbar {
+    display: flex;
+    align-items: center;
+    background-color: #2f3136; /* Dark gray background color for the topbar */
+    padding: 10px 0; /* Padding for the topbar */
+}
+.nottopbar {
+    display: flex;
+    align-items: top;
+    background: rgb(34, 34, 34);
+    padding: 10px 0; /* Padding for the topbar */
+    height: 1000px;
+    padding-top: 0px 0px; /* Padding for the topbar */
+    background: rgb(34,34,34);
+    background: linear-gradient(160deg, rgba(34,34,34,1) 20%, rgba(148,187,233,1) 200%);
+}
+.button1 {
+    user-select: none;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #5f6368; /* Witte tekstkleur voor de knoppen */
+    background-color: #35373c; /* Groene achtergrondkleur voor de knoppen */
+    padding: 10px 20px; /* Binnenruimte van de knoppen */
+    border: none; /* Geen rand om de knoppen */
+    cursor: pointer; /* Aanwijzerstijl bij zweven over de knoppen */
+    margin: 0 4px; /* Ruimte tussen de knoppen in de bovenste button1 */
+}
+.button1:hover {
+transform: scale(.98); /* decreases size by 10% when button is clicked */
+box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.05);
+}
+.button1:active {
+transform: scale(.9);
+box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.1);
+}
+.searchBox{
+  position: fixed;
+  right:0;
+  margin-right: 25px;
+  margin-top: -2px;
+  width: 350px;
+  border: 3px solid #35373c;
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 50px;
+    outline: none;
+    font-size: 18px;
+    color: #757575;
+    font-weight: bold;
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.025);
+    transition: all 0.5s ease;
+    background: rgba(34, 34, 34, 0);
+    background: linear-gradient(160deg, rgba(34, 34, 34, 0) 19%, rgb(28, 28, 28) 100%);
+}
+.searchBox:hover{
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
+}
+.button2{
+    box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.01);
+    transition: all 0.25s ease;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 150px;
+    width: 150px;
+    user-select: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    color: #5f6368; 
+    border-width: 4px;
+    border: none;
+    background-color: #333333
+}
+.button2:hover {
+background-color: rgba #f2f3f5; /* Blue background color when hover */
+transform: scale(.98); /* decreases size by 2% when hover */
+box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.03);
+}
+.button2:active {
+transform: scale(.86);
+box-shadow: 0 0 12px 10px rgba(255, 255, 255, 0.05);
 }
