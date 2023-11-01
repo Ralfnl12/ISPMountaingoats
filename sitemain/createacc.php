@@ -8,14 +8,22 @@ if (!isset($_SESSION['loggedin'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin - Create User Account</title>
+    <title>Mountain Goats - Admin</title>
     <link rel="stylesheet" type="text/css" href="styleadmin.css">
 </head>
 <body>
-    <?php
+<div class="topbar">
+        
+        <div>
+            <button onclick="window.location.href='home.php'" class="button1">Mountain Goats</button>
+            <button onclick="window.location.href='usermanagement.php'" class="button1">terug</button>
+        </div>
+</div>
+<?php
     // Check if the user is an admin (You should have a better way to authenticate admins).
     if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -37,34 +45,36 @@ if (!isset($_SESSION['loggedin'])) {
             $stmt->bind_param("sssi", $username, $password, $email, $admin);
 
             if ($stmt->execute()) {
-                echo "User account created successfully.";
+                echo '<script>alert("Account aangemaakt");</script>';
             } else {
-                echo "Error creating user account: " . $stmt->error;
+                echo '<script>alert("Account maken mislukt");</script>' . $stmt->error;
             }
 
             $stmt->close();
             $conn->close();
         }
     } else {
-        echo "You are not authorized to create user accounts.";
+        echo '<script>"U bent niet bevoegd om accounts toe te voegen");</script>';
+        echo '<script>window.location.href = "home.php";</script>';
     }
     ?>
+    <div class="user-form-container">
+        <h1 class="page-title">Maak account</h1>
+        <form class="user-form" method="post">
+            <label for="username">Gebruikersnaam:</label>
+            <input type="text" name="username" id="username" required><br>
 
-    <h1>Create User Account</h1>
-    <form method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
+            <label for="password">Wachtwoord:</label>
+            <input type="password" name="password" id="password" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br>
+            <label for="admin">Admin:</label>
+            <input type="checkbox" name="admin" id="admin" value="1"><br>
 
-        <label for="admin">Admin:</label>
-        <input type="checkbox" name="admin" id="admin" value="1"><br>
-
-        <input type="submit" value="Create Account">
-    </form>
+            <input type="submit" class="submit-button" value="Maak account">
+        </form>
+    </div>
 </body>
 </html>

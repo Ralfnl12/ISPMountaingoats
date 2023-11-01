@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {
-    echo '<script>alert("You do not have permission to access this page.");</script>';
+    echo '<script>alert("Je hebt geen toegang tot deze pagina.");</script>';
     echo '<script>window.location.href = "home.php";</script>';
     exit;
 }
@@ -69,6 +69,13 @@ $result = $conn->query($sql);
 
 </head>
 <body>
+<div class="topbar">
+        
+        <div>
+            <button onclick="window.location.href='home.php'" class="button1">Mountain Goats</button>
+            <button onclick="window.location.href='createacc.php'" class="button1">Maak account</button>
+        </div>
+</div>
     <h1>Gebruikers beheer</h1>
     
 
