@@ -21,7 +21,7 @@ document.getElementById("searchBox").value = "";
 document.getElementById("searchFrame").src = searchUrl2;
 });
 var button7 = document.getElementById("button7");
-var searchUrl3 = "http://www.staggeringbeauty.com/";
+var searchUrl3 = "https://vistaict.gitbook.io/jaar-1-periode-1/v/2022-p2-sp04/informatie/projecten/interactive-support-platform-isp";
 // Voeg een event listener toe aan de knop
 button7.addEventListener("click", function() {
 // Wanneer de knop wordt ingedrukt, maak de bron van het iframe leeg
