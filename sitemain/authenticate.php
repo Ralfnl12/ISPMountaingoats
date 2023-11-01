@@ -40,11 +40,13 @@ if ($stmt = $con->prepare('SELECT id, password, admin FROM accounts WHERE userna
             header('Location: home.php');
         } else {
             // Incorrect password
-            header('Location: index.html');
+            echo '<script>alert("Gebruikersnaam en/of wachtwoord zijn incorrect");</script>';
+            echo '<script>window.location.href = "index.html";</script>';
         }
     } else {
         // Incorrect username
-        header('Location: index.html');
+        echo '<script>alert("Gebruikersnaam en/of wachtwoord zijn incorrect");</script>';
+        echo '<script>window.location.href = "index.html";</script>';
     }
 
     $stmt->close();

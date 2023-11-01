@@ -12,6 +12,7 @@ if (!isset($_SESSION['loggedin'])) {
 <html>
 <head>
     <title>Admin - Create User Account</title>
+    <link rel="stylesheet" type="text/css" href="styleadmin.css">
 </head>
 <body>
     <?php

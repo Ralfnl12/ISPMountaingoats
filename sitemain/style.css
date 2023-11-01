@@ -4,17 +4,11 @@
     font-size: 16px;
 }
 body {
-    background-color: #435165;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     user-select: none;
     overflow: hidden; /* Hide scrollbars */
-}
-body {
-    user-select: none;
-    margin: 0;
-    overflow: hidden; /* Hide scrollbars */
-    padding: 0;
 }
 .login {
     width: 400px;
@@ -114,7 +108,7 @@ body.loggedin {
     font-weight: bold;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    color: #5f6368; /* Witte tekstkleur voor de knoppen */
+    color: #ffffff; /* Witte tekstkleur voor de knoppen */
     background-color: #35373c; /* Groene achtergrondkleur voor de knoppen */
     padding: 10px 20px; /* Binnenruimte van de knoppen */
     border: none; /* Geen rand om de knoppen */

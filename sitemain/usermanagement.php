@@ -27,31 +27,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['create_user'])) {
         // Handle form submission to create a new user account
         // ...
-if (isset($_POST['change_admin'])) {
-    // Handle form submission to change the user's admin state
-    $username = $_POST['username'];
-    $newAdmin = isset($_POST['admin']) ? $_POST['admin'] : 0;
-    $sql = "UPDATE accounts SET Admin = ? WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("is", $Admin, $username);
-
-    if ($stmt->execute()) {
-        echo "Admin state changed successfully for user: $username";
-    } else {
-        echo "Error changing admin state for user: $username - " . $stmt->error;
-    }
-}
-
     } elseif (isset($_POST['change_admin'])) {
         // Handle form submission to change the user's admin state
         $username = $_POST['username'];
-        $newAdmin = isset($_POST['new_admin']) ? 1 : 0;
-        $sql = "UPDATE accounts SET admin = ? WHERE username = ?";
+        $newAdmin = isset($_POST['Admin']) ? $_POST['Admin'] : 0; // Verander 'admin' naar 'Admin' hier
+        $sql = "UPDATE accounts SET Admin = ? WHERE username = ?"; // Verander 'admin' naar 'Admin' hier
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("is", $Admin, $username);
+        $stmt->bind_param("is", $newAdmin, $username); // Verander 'admin' naar 'newAdmin' hier
 
         if ($stmt->execute()) {
-            echo "Admin state changed successfully for user: $username";
+            echo '<script>alert("Admin succesvol aangepast voor gebruiker(s)");</script>';
         } else {
             echo "Error changing admin state for user: $username - " . $stmt->error;
         }
@@ -63,12 +48,13 @@ if (isset($_POST['change_admin'])) {
         $stmt->bind_param("s", $username);
 
         if ($stmt->execute()) {
-            echo "User account '$username' deleted successfully.";
+            echo '<script>alert("Gebruiker succesvol vewijderd");</script>';
         } else {
-            echo "Error deleting user account: $username - " . $stmt->error;
+            echo '<script>alert("Error tijdens verwijderen gebruiker");</script>' . $stmt->error;
         }
     }
 }
+
 
 // Query to retrieve a list of all users
 $sql = "SELECT username, email, admin FROM accounts";
@@ -78,10 +64,13 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin - User Management</title>
+    <title>Mountain Goats - Admin</title>
+    <link rel="stylesheet" type="text/css" href="styleadmin.css">
+
 </head>
 <body>
-    <h1>User Management</h1>
+    <h1>Gebruikers beheer</h1>
+    
 
     <!-- Create User Account Form -->
     <form method="post">
@@ -89,13 +78,12 @@ $result = $conn->query($sql);
     </form>
 
     <!-- User List -->
-    <h2>User List</h2>
     <table>
         <tr>
-            <th>Username</th>
+            <th>naam</th>
             <th>Email</th>
             <th>Admin</th>
-            <th>Actions</th>
+            <th>Acties</th>
         </tr>
         <?php
         if ($result->num_rows > 0) {
@@ -103,20 +91,20 @@ $result = $conn->query($sql);
                 echo "<tr>";
                 echo "<td>{$row['username']}</td>";
                 echo "<td>{$row['email']}</td>";
-                echo "<td>" . ($row['admin'] == 1 ? "true" : "false") . "</td>";
+                echo "<td>" . ($row['admin'] == 1 ? "ja" : "nee") . "</td>";
 
                 echo "<td>
                         <form method='post'>
                             <input type='hidden' name='username' value='{$row['username']}'>
                             
-                            <label for='new_admin'>Change Admin:</label>
-                            <select name='new_admin' id='Admin'>
-                                <option value='1'>True</option>
-                                <option value='0'>False</option>
-                            </select>
-                            <input type='submit' name='change_admin' value='Change Admin'>
+                            <label for='new_admin'>Admin:</label>
+                            <select name='Admin' id='Admin'>
+                                <option value='1'>Ja</option>
+                                <option value='0'>Nee</option>
+                            </select>   
+                            <input type='submit' name='change_admin' value='Verander'>
                             
-                            <input type='submit' name='delete_user' value='Delete User'>
+                            <input type='submit' name='delete_user' value='Verwijder gebruiker'>
                         </form>
                     </td>";
                 echo "</tr>";
@@ -127,4 +115,3 @@ $result = $conn->query($sql);
         ?>
     </table>
 </body>
-</html>
